@@ -10,6 +10,8 @@ const transactionData = [
     { name: "Thompson Ogoyi", type: "Receive", date: "March 02, 2023", time: "10:21pm", amount: "$350", fee: "$3.00", status: "Completed" },
 ];
 
+// const transactionData = []
+
 const TransactionHistory = () => {
     const [searchTerm, setSearchTerm] = useState("");
 
@@ -38,35 +40,43 @@ const TransactionHistory = () => {
                 </div>
             </div>
 
-            <div className="transaction-table-wrapper">
-                <table className="transaction-table">
-                    <thead>
-                        <tr>
-                            <th>Transaction</th>
-                            <th>Type</th>
-                            <th>Date</th>
-                            <th>Amount</th>
-                            <th>Fee</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filteredTransactions.map((txn, index) => (
-                            <tr key={index}>
-                                <td>{txn.name}</td>
-                                <td>{txn.type}</td>
-                                <td>{txn.date} {txn.time}</td>
-                                <td>{txn.amount}</td>
-                                <td>{txn.fee}</td>
-                                <td className={`status ${txn.status.toLowerCase()}`}>
-                                    <button>{txn.status}</button></td>
-                                <td><FaEllipsisV /></td>
+            {filteredTransactions.length > 0 ? (
+                <div className="transaction-table-wrapper">
+                    <table className="transaction-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Fee</th>
+                                <th style={{ textAlign: "center" }}>Status</th>
+                                <th style={{ textAlign: "center" }}>Action</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
+                        </thead>
+                        <tbody>
+                            {filteredTransactions.map((txn, index) => (
+                                <tr key={index}>
+                                    <td>{txn.name}</td>
+                                    <td>{txn.type}</td>
+                                    <td>{txn.date} {txn.time}</td>
+                                    <td>{txn.amount}</td>
+                                    <td>{txn.fee}</td>
+                                    <td style={{ textAlign: "center" }} className={`status ${txn.status.toLowerCase()}`}>
+                                        <button>{txn.status}</button></td>
+                                    <td style={{ cursor: "pointer", textAlign: "center" }}><FaEllipsisV /></td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            ) : (
+                <div className="no-transactions">
+                    <p>Ready for your first transaction? Your history will appear here once you begin to use Payfrica</p>
+                    <button className="get-started-button">Get Started</button>
+                    <div className="dashed-line"></div>
+                </div>
+            )}
         </div>
     );
 };

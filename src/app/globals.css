@@ -291,12 +291,14 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #3c53a4;
+  background: rgba(60, 83, 164, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .close-icon {
@@ -306,6 +308,7 @@ body {
   font-size: 2rem;
   cursor: pointer;
   color: white;
+  cursor: pointer;
 }
 
 .mobile-nav-links {
@@ -322,6 +325,7 @@ body {
   font-weight: 500;
   color: white;
   transition: color 0.3s;
+  font-family: InterLight;
 }
 
 .mobile-nav-links li:hover {
@@ -364,10 +368,8 @@ body {
 /* Balances Display Stylings */
 .balances-container {
   position: relative;
-  /* padding: 2rem; */
   overflow: hidden;
   background-color: #f6b918;
-  /* background-image: url("../Assets/Images/BalancesBg.png"); */
 }
 
 .balances-container::before {
@@ -391,8 +393,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #f6b918; /* The overlay color */
-  opacity: 0.7; /* Adjust this value to control the overlay visibility */
+  background-color: #f6b918;
+  opacity: 0.7;
   z-index: 2;
 }
 
@@ -782,9 +784,7 @@ body {
   }
 }
 
-/* Transaction History Section Stylings */
-
-/* Container Styling */
+/* Transaction History Section Styling */
 .transaction-history-container {
   padding: 2rem;
   background: white;
@@ -799,13 +799,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 40px;
 }
 
 .transaction-header h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 40px;
   color: #3c53a4;
+  font-family: LexendExtraBold;
+  font-weight: bold;
 }
 
 .transaction-controls {
@@ -854,24 +855,21 @@ body {
   border-collapse: collapse;
 }
 
-.transaction-table thead {
-  padding: 50px 0px;
-}
-
 .transaction-table th,
 .transaction-table td {
-  padding: 30px;
+  padding: 20px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
 .transaction-table th {
   background-color: #f0f0f0;
-  font-weight: bold;
+  font-family: InterBold;
 }
 
 .transaction-table td {
   background-color: white;
+  font-family: InterLight;
 }
 
 .transaction-table tr:hover {
@@ -879,60 +877,79 @@ body {
 }
 
 /* Status Styling */
-.status.completed {
-  color: #4caf50;
-  font-weight: bold;
+.status button {
+  width: 150px;
+  padding: 10px 0;
 }
 
 .status.completed button {
   background-color: #4caf50;
   color: white;
   border: none;
-  padding: 5px 10px;
   border-radius: 5px;
-  cursor: pointer;
-}
-
-.status.failed {
-  color: #ff4d4d;
-  font-weight: bold;
+  font-family: InterBold;
 }
 
 .status.failed button {
   background-color: #ff4d4d;
   color: white;
   border: none;
-  padding: 5px 10px;
   border-radius: 5px;
-  cursor: pointer;
-}
-
-.status.pending {
-  color: #ffa500;
-  font-weight: bold;
+  font-family: InterBold;
 }
 
 .status.pending button {
   background-color: #ffa500;
   color: white;
   border: none;
-  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: InterBold;
+}
+
+/* No Transactions Styling */
+.no-transactions {
+  text-align: center;
+  padding: 3rem;
+  background-color: #fff5e1;
+  border-radius: 10px;
+}
+
+.no-transactions p {
+  font-size: 1rem;
+  color: #3c53a4;
+  margin-bottom: 1rem;
+}
+
+.get-started-button {
+  background-color: #3c53a4;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
   border-radius: 5px;
   cursor: pointer;
 }
 
+/* Dashed Line and X Indicator */
+.dashed-line {
+  width: 100%;
+  height: 1px;
+  border-top: 1px dashed #3c53a4;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.x-indicator {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: #3c53a4;
+}
+
 /* Mobile Styling */
 @media (max-width: 768px) {
-  .transaction-table-wrapper {
-    overflow-x: auto;
-  }
-
-  .transaction-header h2 {
-    font-size: 1.5rem;
-  }
-
   .transaction-controls {
-    flex-direction: column;
     gap: 0.5rem;
   }
 
@@ -940,21 +957,129 @@ body {
   .transaction-controls select {
     width: 100%;
   }
-}
 
-/* Small Mobile View */
-@media (max-width: 480px) {
   .transaction-header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .transaction-controls {
-    width: 100%;
+  .transaction-header h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Send Money Overlay Stylings */
+/* Overlay Background */
+.overlay-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Overlay Container */
+.send-money-overlay,
+.overlay {
+  background-color: #fff5e1;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+/* Overlay Container */
+.send-money-overlay {
+  background-color: #fbe19a;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+/* Overlay Header */
+.overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.overlay-header h2 {
+  font-size: 1.8rem;
+  color: #000;
+  font-family: LexendExtraBold;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 30px;
+  color: #bf8555;
+}
+
+/* Options Styling */
+.overlay-options .option {
+  display: flex;
+  align-items: center;
+  background-color: #fcf5d7;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.overlay-options .option:hover {
+  background-color: #ffeab6;
+}
+
+.overlay-options .option h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  font-family: InterBold;
+}
+
+.overlay-options .option p {
+  font-size: 0.9rem;
+  color: #555;
+  font-family: InterLight;
+}
+
+.overlay-options .option span {
+  font-size: 0.8rem;
+  color: #ff4d4d;
+}
+
+/* Icons Styling */
+.overlay-options .option svg {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: #ffcc33;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .send-money-overlay {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-options .option {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .transaction-table th,
-  .transaction-table td {
-    padding: 0.5rem;
+  .overlay-options .option svg {
+    margin-bottom: 0.5rem;
   }
 }

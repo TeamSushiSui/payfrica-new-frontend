@@ -1,4 +1,4 @@
-import { Navigation, Balances, QuickActions, SavingsCircle, TransactionHistory } from '@/imports';
+import { Navigation, Balances, QuickActions, SavingsCircle, TransactionHistory, SendMoneyOverlay } from '@/imports';
 
 const Dashboard = () => {
     return (
@@ -8,6 +8,7 @@ const Dashboard = () => {
             <QuickActions />
             <SavingsCircle />
             <TransactionHistory />
+            <SendMoneyOverlay />
         </div>
     )
 }

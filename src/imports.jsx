@@ -13,5 +13,9 @@ import Balances from './components/Balances';
 import QuickActions from './components/QuickActions';
 import SavingsCircle from './components/SavingsCircle';
 import TransactionHistory from './components/TransactionHistory';
+import SendMoneyOverlay from './components/SendMoneyOverlay';
 
-export { LoginFeaturedImage, GoogleIcon, FacebookIcon, TwitchIcon, MicrosoftIcon, Navigation, PayfricaNavLogo, BalancesBg, Balances, QuickActions, SavingsCircle, TransactionHistory };
+// Importd for Layout
+import { GlobalStateProvider } from '@/GlobalStateProvider';
+
+export { LoginFeaturedImage, GoogleIcon, FacebookIcon, TwitchIcon, MicrosoftIcon, Navigation, PayfricaNavLogo, BalancesBg, Balances, QuickActions, SavingsCircle, TransactionHistory, GlobalStateProvider, SendMoneyOverlay };

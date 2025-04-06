@@ -1,9 +1,13 @@
+// "use client";
 import "./globals.css";
+import { GlobalStateProvider } from "@/imports";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <GlobalStateProvider>
+      <html lang="en">
+        <body>{children}</body>
+      </html>
+    </GlobalStateProvider>
   );
 }
