@@ -1015,12 +1015,13 @@ body {
 }
 
 .overlay-header h2 {
-  font-size: 1.8rem;
+  font-size: 30px;
   color: #000;
   font-family: LexendExtraBold;
 }
 
-.close-icon {
+.close-icon,
+.back-icon {
   cursor: pointer;
   font-size: 30px;
   color: #bf8555;
@@ -1082,4 +1083,246 @@ body {
   .overlay-options .option svg {
     margin-bottom: 0.5rem;
   }
+}
+
+/* Payfrica Padi Overlay Styling */
+.payfrica-tag-input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  outline: none;
+  font-family: InterLight;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.check-tag-button {
+  background-color: #3c53a4;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-family: InterBold;
+  font-size: 20px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Enter Amount Overlay Styling */
+.enter-amount-overlay {
+  background-color: #fbe19a;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+}
+
+/* Header */
+.overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.back-icon,
+.qrcodeicon {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #bf8555;
+}
+
+/* Recipient Information */
+.recipient-info {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.recipient-info h3 {
+  font-size: 1.5rem;
+  color: #3c53a4;
+  font-family: LexendExtraBold;
+}
+
+.recipient-info p {
+  font-size: 1rem;
+  color: #555;
+  font-family: InterLight;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Amount Entry Section */
+.amount-entry {
+  background-color: #fcf5d7;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.amount-entry h3 {
+  color: #c43e26;
+  margin-bottom: 0.5rem;
+  font-family: LexendExtraBold;
+  font-size: 1.5rem;
+}
+
+.amount-entry input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  outline: none;
+  font-family: InterLight;
+  font-size: 20px;
+}
+
+.amount-options {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.amount-options button {
+  background: none;
+  border: 1px solid #c43e26;
+  color: #c43e26;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: InterBold;
+  font-size: 1rem;
+}
+
+.amount-options button:hover {
+  background-color: #c43e26;
+  color: white;
+}
+
+/* Send Money Button */
+.send-money-button {
+  background-color: #3c53a4;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+  font-family: InterBold;
+  font-size: 20px;
+}
+
+.send-money-button:hover {
+  background-color: #2b3d7a;
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
+  .enter-amount-overlay {
+    padding: 1.5rem;
+  }
+}
+
+/* Sending Loader */
+.sending-overlay {
+  background-color: #fff5e1;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ddd;
+  border-top: 6px solid #3c53a4;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  margin: 1.5rem auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sending-overlay h3 {
+  color: #3c53a4;
+  font-size: 1.5rem;
+}
+
+.sending-overlay p {
+  color: #00c851;
+  cursor: pointer;
+}
+
+/* Feedback Overlay */
+.feedback-overlay {
+  background-color: #fff5e1;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+}
+
+.feedback-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.success-icon {
+  color: #00c851;
+}
+
+.failed-icon {
+  color: #ff4444;
+}
+
+.feedback-overlay h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #3c53a4;
+  font-family: LexendExtraBold;
+}
+
+.feedback-overlay button {
+  background-color: #3c53a4;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  width: 100%;
+  transition: background-color 0.3s;
+  font-family: InterBold;
+  font-size: 20px;
+}
+
+.feedback-overlay button:hover {
+  background-color: #2b3d7a;
 }

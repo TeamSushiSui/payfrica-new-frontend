@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { FacebookIcon, PayfricaNavLogo } from '@/imports';
+import { ProfileDP, PayfricaNavLogo } from '@/imports';
 import { FaBell, FaBars, FaChevronDown, FaTimes } from 'react-icons/fa';
 
 const Navigation = () => {
@@ -24,7 +24,7 @@ const Navigation = () => {
                 <div className="profile">
                     <FaBell className="icon notis-icon" />
                     <div className="profile-img">
-                        <img src={FacebookIcon.src} alt="Profile" />
+                        <img src={ProfileDP.src} alt="Profile" />
                         <p className='profile-name'>John Doe</p>
                         <FaChevronDown className="icon" />
                     </div>
@@ -36,7 +36,7 @@ const Navigation = () => {
                 <div className="profile-icon">
                     <FaBell className="icon" />
                     <div className="profile-img">
-                        <img src={FacebookIcon.src} alt="Profile" />
+                        <img src={ProfileDP.src} alt="Profile" />
                         <FaChevronDown className="icon" />
                     </div>
                 </div>

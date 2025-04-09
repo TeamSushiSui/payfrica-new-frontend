@@ -17,14 +17,14 @@ const SendMoneyOverlay = () => {
                     <IoIosCloseCircleOutline className="close-icon" onClick={() => toggleOverlay('sendMoney')} />
                 </div>
                 <div className="overlay-options">
-                    <div className="option">
+                    <div className="option" onClick={() => { toggleOverlay('payfricaPadi'); toggleOverlay('sendMoney') }}>
                         <FaPaperPlane />
                         <div>
                             <h3>To Payfrica Padi</h3>
                             <p>Send money to anyone using Payfrica fast and cheap</p>
                         </div>
                     </div>
-                    <div className="option">
+                    <div className="option" style={{ cursor: 'not-allowed' }}>
                         <FaGlobeAfrica />
                         <div>
                             <h3>To Other African Countries</h3>
@@ -32,7 +32,7 @@ const SendMoneyOverlay = () => {
                             <span>Coming Soon</span>
                         </div>
                     </div>
-                    <div className="option">
+                    <div className="option" onClick={() => { toggleOverlay('sendSuiToken'); toggleOverlay('sendMoney') }}>
                         <FaTint />
                         <div>
                             <h3>Send Sui Token</h3>

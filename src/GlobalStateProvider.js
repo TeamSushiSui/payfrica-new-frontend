@@ -7,10 +7,18 @@ export const GlobalStateProvider = ({ children }) => {
   const [overlayStates, setOverlayStates] = useState({
     sendMoney: false,
     receiveMoney: false,
+    sendSuiToken: false,
     deposit: false,
     withdraw: false,
     convert: false,
     manageCards: false,
+    payfricaPadi: false,
+    payfricaPadiSui: false,
+    enterAmount: false,
+    enterSuiAmount: false,
+    sending: false,
+    success: false,
+    failed: false,
   });
 
   const toggleOverlay = (overlayName) => {
@@ -20,12 +28,18 @@ export const GlobalStateProvider = ({ children }) => {
     }));
   };
 
-  useEffect(() => {
-    // Initialize state or perform other setup here
-  }, []);
+  const closeAllOverlays = () => {
+    const allOverlays = Object.keys(overlayStates).reduce((acc, key) => {
+      acc[key] = false;
+      return acc;
+    }, {});
+    setOverlayStates(allOverlays);
+  };
 
   return (
-    <GlobalStateContext.Provider value={{ overlayStates, toggleOverlay }}>
+    <GlobalStateContext.Provider
+      value={{ overlayStates, toggleOverlay, closeAllOverlays }}
+    >
       {children}
     </GlobalStateContext.Provider>
   );
