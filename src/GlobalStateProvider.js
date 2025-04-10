@@ -16,6 +16,7 @@ export const GlobalStateProvider = ({ children }) => {
     payfricaPadiSui: false,
     enterAmount: false,
     enterSuiAmount: false,
+    sendSuiToWA: false,
     sending: false,
     success: false,
     failed: false,

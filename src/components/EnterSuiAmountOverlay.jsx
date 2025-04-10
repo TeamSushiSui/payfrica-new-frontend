@@ -31,7 +31,7 @@ const EnterSuiAmountOverlay = () => {
                 <div className="amount-entry">
                     <h3>Enter Amount</h3>
                     <input
-                        type="text"
+                        type="amount"
                         placeholder="0.00"
                         value={amount}
                         onChange={(e) => setAmount(e.target.value)}

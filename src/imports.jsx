@@ -24,8 +24,9 @@ import FailedOverlay from './components/FailedOverlay';
 import SendSuiTokenOverlay from './components/SendSuiTokenOverlay';
 import PayfricaPadiSuiOverlay from './components/PayfricaPadiSuiOverlay';
 import EnterSuiAmountOverlay from './components/EnterSuiAmountOverlay';
+import SendSuiToWAOverlay from './components/SendSuiToWAOverlay';
 
-// Importd for Layout
+// Imports for Layout
 import { GlobalStateProvider } from '@/GlobalStateProvider';
 
-export { LoginFeaturedImage, GoogleIcon, FacebookIcon, TwitchIcon, MicrosoftIcon, Navigation, PayfricaNavLogo, BalancesBg, Balances, QuickActions, SavingsCircle, TransactionHistory, GlobalStateProvider, SendMoneyOverlay, PayfricaPadiOverlay, EnterAmountOverlay, ProfileDP, SendingOverlay, FeedbackOverlay, SuccessOverlay, FailedOverlay, SendSuiTokenOverlay, PayfricaPadiSuiOverlay, EnterSuiAmountOverlay };
+export { LoginFeaturedImage, GoogleIcon, FacebookIcon, TwitchIcon, MicrosoftIcon, Navigation, PayfricaNavLogo, BalancesBg, Balances, QuickActions, SavingsCircle, TransactionHistory, GlobalStateProvider, SendMoneyOverlay, PayfricaPadiOverlay, EnterAmountOverlay, ProfileDP, SendingOverlay, FeedbackOverlay, SuccessOverlay, FailedOverlay, SendSuiTokenOverlay, PayfricaPadiSuiOverlay, EnterSuiAmountOverlay, SendSuiToWAOverlay };

@@ -1,4 +1,4 @@
-import { Navigation, Balances, QuickActions, SavingsCircle, TransactionHistory, SendMoneyOverlay, PayfricaPadiOverlay, EnterAmountOverlay, SendingOverlay, FeedbackOverlay, SuccessOverlay, FailedOverlay, SendSuiTokenOverlay, PayfricaPadiSuiOverlay, EnterSuiAmountOverlay } from '@/imports';
+import { Navigation, Balances, QuickActions, SavingsCircle, TransactionHistory, SendMoneyOverlay, PayfricaPadiOverlay, EnterAmountOverlay, SendingOverlay, FeedbackOverlay, SuccessOverlay, FailedOverlay, SendSuiTokenOverlay, PayfricaPadiSuiOverlay, EnterSuiAmountOverlay, SendSuiToWAOverlay } from '@/imports';
 
 const Dashboard = () => {
     return (
@@ -18,6 +18,7 @@ const Dashboard = () => {
             <SendSuiTokenOverlay />
             <PayfricaPadiSuiOverlay />
             <EnterSuiAmountOverlay />
+            <SendSuiToWAOverlay />
         </div>
     )
 }

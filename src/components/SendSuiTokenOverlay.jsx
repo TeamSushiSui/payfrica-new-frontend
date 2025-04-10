@@ -24,7 +24,7 @@ const SendSuiTokenOverlay = () => {
                             <p>Send Sui tokens to Payfrica User</p>
                         </div>
                     </div>
-                    <div className="option">
+                    <div className="option" onClick={() => { toggleOverlay('sendSuiToWA'); toggleOverlay('sendSuiToken') }}>
                         <FaTint />
                         <div>
                             <h3>Send Sui Tokens to Wallet Address</h3>
