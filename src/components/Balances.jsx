@@ -11,7 +11,7 @@ const balanceData = [
         tokens: null
     },
     {
-        title: 'Bridge Balance',
+        title: 'Unified Balance',
         amount: '₦45,567.87',
         actionText: 'Tokens: Sui, USDC',
         actionIcon: null,

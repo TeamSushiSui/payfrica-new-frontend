@@ -20,6 +20,9 @@ export const GlobalStateProvider = ({ children }) => {
     sending: false,
     success: false,
     failed: false,
+    // Receive Money Overlays
+    receiveMoney: false,
+    receiveCard: false,
   });
 
   const toggleOverlay = (overlayName) => {

@@ -13,6 +13,7 @@ import Balances from './components/Balances';
 import QuickActions from './components/QuickActions';
 import SavingsCircle from './components/SavingsCircle';
 import TransactionHistory from './components/TransactionHistory';
+// Imports for the Send Money Overlay
 import SendMoneyOverlay from './components/SendMoneyOverlay';
 import PayfricaPadiOverlay from './components/PayfricaPadiOverlay';
 import EnterAmountOverlay from './components/EnterAmountOverlay';
@@ -26,7 +27,12 @@ import PayfricaPadiSuiOverlay from './components/PayfricaPadiSuiOverlay';
 import EnterSuiAmountOverlay from './components/EnterSuiAmountOverlay';
 import SendSuiToWAOverlay from './components/SendSuiToWAOverlay';
 
+// Imports for the Receive Money Overlay
+import ReceiveMoneyOverlay from './components/ReceiveMoneyOverlay';
+import ReceiveCardOverlay from './components/ReceiveCardOverlay';
+import PayfricaCardBg from '@/Assets/Images/PayfricaCardBg.png';
+
 // Imports for Layout
 import { GlobalStateProvider } from '@/GlobalStateProvider';
 
-export { LoginFeaturedImage, GoogleIcon, FacebookIcon, TwitchIcon, MicrosoftIcon, Navigation, PayfricaNavLogo, BalancesBg, Balances, QuickActions, SavingsCircle, TransactionHistory, GlobalStateProvider, SendMoneyOverlay, PayfricaPadiOverlay, EnterAmountOverlay, ProfileDP, SendingOverlay, FeedbackOverlay, SuccessOverlay, FailedOverlay, SendSuiTokenOverlay, PayfricaPadiSuiOverlay, EnterSuiAmountOverlay, SendSuiToWAOverlay };
+export { LoginFeaturedImage, GoogleIcon, FacebookIcon, TwitchIcon, MicrosoftIcon, Navigation, PayfricaNavLogo, BalancesBg, Balances, QuickActions, SavingsCircle, TransactionHistory, GlobalStateProvider, SendMoneyOverlay, PayfricaPadiOverlay, EnterAmountOverlay, ProfileDP, SendingOverlay, FeedbackOverlay, SuccessOverlay, FailedOverlay, SendSuiTokenOverlay, PayfricaPadiSuiOverlay, EnterSuiAmountOverlay, SendSuiToWAOverlay, ReceiveMoneyOverlay, ReceiveCardOverlay, PayfricaCardBg };

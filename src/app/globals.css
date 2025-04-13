@@ -1326,3 +1326,389 @@ body {
 .feedback-overlay button:hover {
   background-color: #2b3d7a;
 }
+
+Overlay Background .overlay-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Overlay Background
+.overlay-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+} */
+
+/* Receive Money Overlay Stylings */
+
+.receive-money-container {
+  background-color: #3c53a4; /* Deep Blue */
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 480px;
+  color: #fbe19a;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Bar */
+.receive-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fbe19a;
+  margin-bottom: 2rem;
+  font-size: 20px;
+  font-family: LexendExtraBold;
+}
+
+.receive-header .icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* QR Code Container */
+.qr-wrapper {
+  margin: 1.5rem 0;
+}
+
+/* Labels */
+.info-block {
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.info-block h2 {
+  font-family: InterBold;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #f6b918;
+  font-size: 16px;
+}
+
+/* Copy Box */
+.copy-box {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copy-box p {
+  margin: 0;
+  font-size: 1rem;
+  font-family: InterLight;
+  overflow-wrap: break-word;
+  flex: 1;
+  color: #fbe19a;
+}
+
+/* Copy Button */
+.copy-box button {
+  background-color: #3c53a4;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: InterBold;
+}
+
+/* Note */
+.note {
+  font-size: 0.85rem;
+  color: #f6b918;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: InterLight;
+}
+
+/* Share Button */
+.share-btn {
+  background-color: #c43e26;
+  font-family: InterBold;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.share-btn:hover {
+  background-color: #a4311f;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+  .receive-money-container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .copy-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .copy-box button {
+    align-self: flex-end;
+  }
+}
+
+/* Receive Card Overlay */
+/* Fullscreen Modal */
+/* Main Container */
+.card-overlay-container {
+  background-color: #3c53a4;
+  color: #fbe19a;
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem 1rem;
+  height: 100%;
+  position: relative;
+  /* overflow-y: auto; */
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent; /* Custom scrollbar color */
+
+  /* For Webkit-based browsers (Chrome, Safari, Edge) */
+  &::-webkit-scrollbar {
+    width: 6px; /* Thin scrollbar width */
+    height: 6px; /* Thin scrollbar height */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded scrollbar thumb */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent; /* Transparent scrollbar track */
+  }
+}
+
+/* Header */
+.overlay-header {
+  background-color: #c43e26;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: LexendExtraBold;
+  font-size: 16px;
+}
+
+.overlay-header h2 {
+  color: #fff;
+}
+
+/* Title */
+.card-title {
+  text-align: center;
+  margin: 2rem 0 1.5rem;
+}
+
+.card-title h1 {
+  font-family: LexendExtraBold;
+  font-size: 2.5rem;
+  color: #f6b918;
+  margin-bottom: 0.5rem;
+}
+
+.card-title p {
+  font-size: 1rem;
+  color: #fbe19a;
+}
+
+/* Card Display Section */
+.card-preview {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Payfrica Card Front */
+.pay-card.front {
+  width: 280px;
+  height: 455px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: Inter;
+  border: 1px solid #fff;
+}
+
+.payfrica-card-header {
+  background-color: #f6b918;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.payfrica-card-header img {
+  /* width: 120px; */
+  height: auto;
+}
+
+.payfrica-card-header span {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #c43e26;
+}
+
+/* QR Section */
+.card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.qr-container {
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  background: white;
+  margin: 40px 0;
+}
+
+.qr-corners {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3.5px solid #3c53a4; /* Payfrica blue */
+}
+
+.tl {
+  top: -3px;
+  left: -3px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.tr {
+  top: -3px;
+  right: -3px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.bl {
+  bottom: -3px;
+  left: -3px;
+  border-right: none;
+  border-top: none;
+}
+
+.br {
+  bottom: -3px;
+  right: -3px;
+  border-left: none;
+  border-top: none;
+}
+
+.card-body .tagline {
+  font-size: 20px;
+  font-family: LexendLight;
+  color: #c43e26;
+  font-weight: bold;
+}
+
+.card-body .pay-id {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #474747;
+  font-family: LexendLight;
+}
+
+/* Back of the card */
+.pay-card.back img {
+  width: 280px;
+  height: 455px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Save Button */
+.save-btn {
+  background-color: #c43e26;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  margin: 2rem auto 0;
+  display: block;
+  transition: background-color 0.3s;
+  font-family: InterBold;
+}
+
+.save-btn:hover {
+  background-color: #a4311f;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .card-preview {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pay-card.back {
+    display: none;
+  }
+
+  .card-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .save-btn {
+    font-size: 0.95rem;
+  }
+}
