@@ -464,13 +464,13 @@ body {
   transform: scale(1.05);
 }
 
-.card-header {
+.balance-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.card-header span {
+.balance-card-header span {
   color: orange;
   font-size: 1rem;
   font-weight: 500;
@@ -704,14 +704,14 @@ body {
   transform: scale(1.05);
 }
 
-.card-header {
+.savings-circle-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
   font-size: 20px;
-  font-family: InterBold;
-  font-weight: bold;
+  font-family: InterLight;
+  /* font-weight: bold; */
   color: #3c53a4;
 }
 
@@ -1518,7 +1518,7 @@ Overlay Background .overlay-background {
 }
 
 /* Header */
-.overlay-header {
+.card-overlay-header {
   background-color: #c43e26;
   color: white;
   padding: 0.8rem 1rem;
@@ -1530,7 +1530,7 @@ Overlay Background .overlay-background {
   font-size: 16px;
 }
 
-.overlay-header h2 {
+.card-overlay-header h2 {
   color: #fff;
 }
 
@@ -1710,5 +1710,234 @@ Overlay Background .overlay-background {
 
   .save-btn {
     font-size: 0.95rem;
+  }
+}
+
+/* Convert Overlay Stylings */
+.convert-overlay {
+  background: #fbe19a;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.convert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #c43e26;
+  font-family: LexendExtraBold;
+  font-size: 30px;
+}
+
+.close-btn {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #c43e26;
+}
+
+.convert-select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 16px;
+  margin: 1rem 0;
+  border-radius: 8px;
+  border: none;
+  background: #fef6d5;
+  color: #474747;
+}
+
+.convert-icon {
+  font-size: 24px;
+  margin: 1rem 0;
+  color: #c43e26;
+  rotate: 90deg;
+}
+
+.convert-btn {
+  background: #3c53a4;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: InterBold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.convert-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Confirm Convert Overlay Stylings */
+.confirm-convert-overlay {
+  display: flex;
+  flex-direction: column;
+  background: #fbe19a;
+  text-align: center;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  color: #000;
+}
+
+.confirm-overlay-close-icon {
+  align-self: flex-end;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  cursor: pointer;
+}
+
+.confirm-convert-overlay h4 {
+  font-size: 1.5rem;
+  font-family: LexendExtraBold;
+}
+
+.confirm-convert-overlay h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: LexendExtraBold;
+  margin: 0.5rem 0;
+  color: #c43e26;
+}
+
+.confirm-convert-overlay p {
+  font-size: 1.5rem;
+  font-family: InterLight;
+  margin: 0.5rem 0;
+}
+
+.convert-summary {
+  background: #fdf5ce;
+  margin: 2rem 0;
+  padding: 1rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.convert-summary div {
+  display: flex;
+  justify-content: space-between;
+  color: #c43e26;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.convert-summary div span {
+  font-size: 20px;
+  font-family: InterLight;
+}
+
+.convert-summary div strong {
+  font-size: 20px;
+  font-family: LexendExtraBold;
+}
+
+/* Coin Select Stylings */
+.coin-select-wrapper {
+  margin-bottom: 1rem;
+}
+
+.coin-label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  margin-top: 20px;
+  font-size: 25px;
+  color: #c43e26;
+  font-family: InterBold;
+  margin-bottom: 20px;
+}
+
+.coin-select {
+  position: relative;
+  background: #fff8d5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.coin-select select {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  font-size: 16px;
+  font-family: InterLight;
+  color: #474747;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  color: #c43e26;
+}
+
+.coin-preview {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  font-family: InterBold;
+  color: #3c53a4;
+}
+
+.coin-preview img {
+  width: 24px;
+  height: 24px;
+}
+
+.coin-preview span {
+  font-size: 18px;
+  font-family: InterBold;
+  color: #a4311f;
+}
+
+/* Convert Responsive Stylings */
+@media (max-width: 500px) {
+  .convert-header h3 {
+    font-size: 25px;
+  }
+
+  .coin-label {
+    font-size: 20px;
+  }
+
+  .confirm-overlay-close-icon {
+    right: 5px;
+  }
+
+  .confirm-convert-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .confirm-convert-overlay p {
+    font-size: 1.2rem;
+  }
+
+  .convert-summary div span {
+    font-size: 15px;
+    font-family: InterLight;
+    align-self: flex-start;
+  }
+
+  .convert-summary div strong {
+    font-size: 15px;
+    font-family: LexendExtraBold;
   }
 }

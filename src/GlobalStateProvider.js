@@ -23,6 +23,9 @@ export const GlobalStateProvider = ({ children }) => {
     // Receive Money Overlays
     receiveMoney: false,
     receiveCard: false,
+    // Convert Tokens Overlays
+    confirmConvert: false,
+    convert: false,
   });
 
   const toggleOverlay = (overlayName) => {
@@ -40,9 +43,20 @@ export const GlobalStateProvider = ({ children }) => {
     setOverlayStates(allOverlays);
   };
 
+  const [convertData, setConvertData] = useState({
+    fromToken: "",
+    toToken: "",
+  });
+
   return (
     <GlobalStateContext.Provider
-      value={{ overlayStates, toggleOverlay, closeAllOverlays }}
+      value={{
+        overlayStates,
+        toggleOverlay,
+        closeAllOverlays,
+        convertData,
+        setConvertData,
+      }}
     >
       {children}
     </GlobalStateContext.Provider>

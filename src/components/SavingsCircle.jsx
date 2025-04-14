@@ -17,7 +17,7 @@ const SavingsCircle = () => {
             <div className="savings-circles-wrapper">
                 {savingsCircles.map((circle, index) => (
                     <div key={index} className="savings-circle-card">
-                        <div className="card-header">
+                        <div className="savings-circle-card-header">
                             <span>{circle.title}</span>
                             <FaChevronRight />
                         </div>

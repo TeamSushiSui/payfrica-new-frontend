@@ -64,14 +64,19 @@ const BalanceCards = () => {
                 <div className="cards-wrapper">
                     {balanceData.map((card, index) => (
                         <div key={index} className="balance-card">
-                            <div className="card-header">
-                                <span>{card.title}</span>
-                                <div>
+                            <div className="balance-card-header">
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                    <span>{card.title}</span>
                                     <span onClick={() => toggleCardBalance(index)}>
-                                        {visibleCards[index] ? <FaEye /> : <FaEyeSlash />}
+                                        {visibleCards[index] ? <FaEye style={{ cursor: 'pointer' }} /> : <FaEyeSlash style={{ cursor: 'pointer' }} />}
                                     </span>
-                                    <FaEllipsisV className="icon" />
                                 </div>
+                                {/* <div> */}
+                                {/* <span onClick={() => toggleCardBalance(index)}>
+                                    {visibleCards[index] ? <FaEye /> : <FaEyeSlash />}
+                                </span> */}
+                                {/* </div> */}
+                                <FaEllipsisV className="icon" />
                             </div>
 
                             <div className="card-amount">

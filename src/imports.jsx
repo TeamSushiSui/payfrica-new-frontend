@@ -32,7 +32,12 @@ import ReceiveMoneyOverlay from './components/ReceiveMoneyOverlay';
 import ReceiveCardOverlay from './components/ReceiveCardOverlay';
 import PayfricaCardBg from '@/Assets/Images/PayfricaCardBg.png';
 
+// Imports for Converts
+import ConvertOverlay from './components/ConvertOverlay';
+import ConfirmConvertOverlay from './components/ConfirmConvertOverlay';
+import SuiLogo from '@/Assets/Images/SuiLogo.png';
+
 // Imports for Layout
 import { GlobalStateProvider } from '@/GlobalStateProvider';
 
-export { LoginFeaturedImage, GoogleIcon, FacebookIcon, TwitchIcon, MicrosoftIcon, Navigation, PayfricaNavLogo, BalancesBg, Balances, QuickActions, SavingsCircle, TransactionHistory, GlobalStateProvider, SendMoneyOverlay, PayfricaPadiOverlay, EnterAmountOverlay, ProfileDP, SendingOverlay, FeedbackOverlay, SuccessOverlay, FailedOverlay, SendSuiTokenOverlay, PayfricaPadiSuiOverlay, EnterSuiAmountOverlay, SendSuiToWAOverlay, ReceiveMoneyOverlay, ReceiveCardOverlay, PayfricaCardBg };
+export { LoginFeaturedImage, GoogleIcon, FacebookIcon, TwitchIcon, MicrosoftIcon, Navigation, PayfricaNavLogo, BalancesBg, Balances, QuickActions, SavingsCircle, TransactionHistory, GlobalStateProvider, SendMoneyOverlay, PayfricaPadiOverlay, EnterAmountOverlay, ProfileDP, SendingOverlay, FeedbackOverlay, SuccessOverlay, FailedOverlay, SendSuiTokenOverlay, PayfricaPadiSuiOverlay, EnterSuiAmountOverlay, SendSuiToWAOverlay, ReceiveMoneyOverlay, ReceiveCardOverlay, PayfricaCardBg, ConvertOverlay, ConfirmConvertOverlay, SuiLogo };

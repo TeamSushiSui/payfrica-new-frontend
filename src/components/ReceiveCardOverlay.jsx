@@ -32,7 +32,7 @@ const ReceiveCardOverlay = () => {
         <div className="overlay-background">
             <div className="card-overlay-container">
                 {/* Header */}
-                <div className="overlay-header">
+                <div className="card-overlay-header">
                     <FaArrowLeft className="icon" onClick={() => { toggleOverlay('receiveCard'); toggleOverlay('receiveMoney') }} />
                     <h2>Receive Money</h2>
                     <BsQuestionCircleFill className="icon" />
